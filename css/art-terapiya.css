@@ -186,10 +186,10 @@
 }
 
 .ex-image--compact {
-    flex-basis: 92%;
-    width: 92%;
-    height: 92%;
-    object-fit: contain
+    flex-basis: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
 }
 
 .ex-meta {
@@ -608,5 +608,46 @@
 
     .week-grid .day-card:nth-child(n+5) {
         display: none
+    }
+}
+
+@media(max-width:640px) {
+    .ex-tabs {
+        gap: 4px;
+        padding: 5px
+    }
+
+    .ex-tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+        padding: 10px 4px;
+        font-size: 12px;
+        line-height: 1.2;
+        white-space: nowrap
+    }
+
+    .ex-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px
+    }
+
+    .ex-visual {
+        aspect-ratio: 4 / 3
+    }
+
+    .ex-meta {
+        padding: 14px 15px 16px;
+        text-align: left
+    }
+
+    .ex-title {
+        font-size: 16px;
+        line-height: 1.35
+    }
+
+    .ex-sub {
+        line-height: 1.5
     }
 }
